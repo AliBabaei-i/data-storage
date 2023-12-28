@@ -220,7 +220,7 @@ body {
     position: fixed;
 }
 /* mobile view port */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 377px) {
     .body {
         font-size: 13px;
         overflow: hidden;
