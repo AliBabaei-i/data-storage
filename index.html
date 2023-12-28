@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <title>Fylo data storage component</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="parent">
+      <section class="rectangle">
+        <div class="square">
+          <div class="logo"><img src="./images/logo.svg" alt=""></div>
+          <div class="icon" id="icon">
+            <ul>
+              <li><a href=""><img src="./images/icon-document.svg" alt=""></a></li>
+              <li><a href=""><img src="./images/icon-folder.svg" alt=""></a></li>
+              <li><a href=""><img src="./images/icon-upload.svg" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="storage">
+        <div class="notify">
+          <div class="rec">
+            <p id="first">185</p>
+            <p id="second">GB LEFT</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <div class="range">
+          <label for="data"> You’ve used &nbsp;<p> 815 GB </p>&nbsp; of your storage</label>
+          <input ip="data" type="range" min="0" max="100" step="10" value="80">
+          <div class="volume">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+        </div>
+      </section>
+      <section class="backGround"></section>
+    </div>
+  </div>
+</body>
+
+</html>

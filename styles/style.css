@@ -1,0 +1,371 @@
+@font-face {
+    font-family: Raleway;
+    src: url("./Raleway-ExtraBold.ttf");
+}
+
+body {
+    font-family: "Raleway";
+    direction: ltr;
+    background-color: hsl(229, 57%, 11%);
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+}
+.container .parent {
+    height: 100%;
+    width: 950px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rectangle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px 100px 10px 10px;
+    width: 350px;
+    height: 201px;
+    background-color: #1e2d69;
+    z-index: 1;
+}
+.rectangle .square {
+    width: 253px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 129px;
+    justify-content: space-between;
+}
+.rectangle .logo {
+    width: 176px;
+    height: 40px;
+}
+.rectangle .logo img {
+    width: 135px;
+}
+.rectangle #icon {
+    width: 176px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.rectangle #icon ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.rectangle #icon ul li {
+    list-style: none;
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    background-color: #0c122c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.storage {
+    width: 540px;
+    height: 201px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #1e2d69; */
+    border-radius: 10px;
+    background-color: transparent;
+    position: relative;
+}
+.storage .notify {
+    width: 179px;
+    height: 94px;
+    position: absolute;
+    top: -24px;
+    right: 44px;
+    z-index: 2;
+}
+.storage .notify .rec {
+    width: 100%;
+    height: 72px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+#first {
+    font-size: 40px;
+    font-weight: 700;
+}
+#second {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(162, 163, 163);
+    letter-spacing: 1px;
+    margin-left: 7px;
+}
+.storage .notify .triangle {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 22.66px 22.66px 0 0px;
+    border-color: #ffff transparent transparent transparent;
+    transform: rotate(90deg);
+    right: 0;
+    bottom: 0;
+}
+.storage .range {
+    background-color: #1e2d69;
+    width: 100%;
+    height: 178px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    bottom: 0;
+    position: absolute;
+}
+
+.storage label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    padding-left: 81px;
+}
+.storage .range label p {
+    font-weight: 700;
+}
+.storage input[type="range"] {
+    height: 20px;
+    width: 461px;
+    margin: 10px 0;
+    background-color: #0c122c;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.storage [type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(
+        to right,
+        rgb(255, 161, 151),
+        rgb(255, 74, 149)
+    );
+    height: 14px;
+    width: 454px;
+    border-radius: 8px;
+}
+.storage [type="range"]::-moz-range-track {
+    background: linear-gradient(
+        to right,
+        rgb(255, 161, 151),
+        rgb(255, 74, 149)
+    );
+    height: 14px;
+    width: 454px;
+    border-radius: 8px;
+}
+
+.storage [type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+.storage [type="range"]::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    cursor: pointer;
+}
+.storage .volume {
+    width: 461px;
+    height: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+}
+.backGround {
+    background-image: url(../images/bg-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 420px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    position: fixed;
+}
+/* mobile view port */
+@media screen and (max-width: 375px) {
+    .body {
+        font-size: 13px;
+        overflow: hidden;
+    }
+    .backGround {
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        position: fixed;
+    }
+    .container {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        margin: auto;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%ّ;
+    }
+    .container .parent {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .rectangle {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 10px 100px 10px 10px;
+        width: 326px;
+        height: 201px;
+        background-color: #1e2d69;
+        z-index: 1;
+    }
+    .storage {
+        width: 326px;
+        height: 196px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e2d69;
+        border-radius: 10px;
+        background-color: transparent;
+        position: relative;
+    }
+    .storage input[type="range"] {
+        height: 20px;
+        width: 262px;
+        margin: 10px 0;
+        background-color: #0c122c;
+        outline: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .storage [type="range"]::-webkit-slider-runnable-track {
+        background: linear-gradient(
+            to right,
+            rgb(255, 161, 151),
+            rgb(255, 74, 149)
+        );
+        height: 14px;
+        width: 100%;
+        border-radius: 8px;
+    }
+    .storage [type="range"]::-moz-range-track {
+        background: linear-gradient(
+            to right,
+            rgb(255, 161, 151),
+            rgb(255, 74, 149)
+        );
+        height: 14px;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .storage [type="range"]::-webkit-slider-thumb {
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        cursor: pointer;
+    }
+    .storage [type="range"]::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        cursor: pointer;
+    }
+    .storage label {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        color: #fff;
+        padding-left: 81px;
+    }
+    .storage .volume {
+        width: 262px;
+        height: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        color: #fff;
+    }
+    .storage .notify .triangle {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 22.66px 22.66px 0 0px;
+        border-color: #ffff transparent transparent transparent;
+        transform: rotate(90deg);
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+    .storage .notify .rec {
+        width: 100%;
+        height: 72px;
+        background-color: #fff;
+        border-radius: 10px 10px 10px 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+    .storage .notify {
+        width: 179px;
+        height: 94px;
+        position: absolute;
+        top: -24px;
+        right: 44px;
+        z-index: 2;
+    }
+}
