@@ -25,8 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![image](https://alibabaei-i.github.io/data-storage/)
-
+![desktop-design](https://github.com/AliBabaei-i/data-storage/assets/155062135/db415b0b-6d16-4f19-9c58-ca0408ead50e)
 ### Links
 
 - Live Site URL: (https://alibabaei-i.github.io/data-storage/)
