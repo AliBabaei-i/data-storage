@@ -41,8 +41,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project i learned use positions and some css attribute
-
+In this project, I learned how to use some CSS attributes such as position and valid values for it. I also learned how to use media queries to make this project responsive.
 ## Author
 
 - Website - [Ali babaei](https://www.alibabaei.info)
