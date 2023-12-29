@@ -1,4 +1,4 @@
-# data storage component 
+# Data Storage Component 
 
 UI of a data-storage component
 
@@ -25,12 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop-design](https://github.com/AliBabaei-i/data-storage/assets/155062135/db415b0b-6d16-4f19-9c58-ca0408ead50e)
+![Screenshot 2023-12-29 132957](https://github.com/AliBabaei-i/data-storage/assets/155062135/2f9cb410-ca52-4ccc-a510-cb025e00eac5)
+
 ### Links
 
-- Live Site URL: (https://alibabaei-i.github.io/data-storage/)
+- [Live Site URL](https://alibabaei-i.github.io/data-storage/)
 
-## my-process
+## My process
 
 ### Built with
 
@@ -45,5 +46,5 @@ In this project, I learned how to use some CSS attributes such as position and v
 ## Author
 
 - Website - [Ali babaei](https://www.alibabaei.info)
-- linkedin - [Ali Babaei](https://www.twitter.com/yourusername)
+- linkedin - [Ali Babaei](https://www.linkedin.com/in/ali-babaee/)
 
