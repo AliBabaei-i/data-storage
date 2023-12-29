@@ -45,6 +45,5 @@ Users should be able to:
 In this project, I learned how to use some CSS attributes such as position and valid values for it. I also learned how to use media queries to make this project responsive.
 ## Author
 
-- Website - [Ali babaei](https://www.alibabaei.info)
 - linkedin - [Ali Babaei](https://www.linkedin.com/in/ali-babaee/)
 
