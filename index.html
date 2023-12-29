@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/reset.css">
-  <title>Fylo data storage component</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <title>data storage component</title>
 
 </head>
 
@@ -21,34 +20,42 @@
           <div class="logo"><img src="./images/logo.svg" alt=""></div>
           <div class="icon" id="icon">
             <ul>
-              <li><a href=""><img src="./images/icon-document.svg" alt=""></a></li>
-              <li><a href=""><img src="./images/icon-folder.svg" alt=""></a></li>
-              <li><a href=""><img src="./images/icon-upload.svg" alt=""></a></li>
+              <li><img src="./images/icon-document.svg" alt=""></li>
+              <li><img src="./images/icon-folder.svg" alt=""></li>
+              <li><img src="./images/icon-upload.svg" alt=""></li>
             </ul>
           </div>
         </div>
       </section>
       <section class="storage">
-        <div class="notify">
+        <!-- <div class="notify">
+          <div class="triangle"></div>
           <div class="rec">
             <p id="first">185</p>
             <p id="second">GB LEFT</p>
           </div>
-          <div class="triangle"></div>
+        </div> -->
+        <div class="notify">
+          <div class="box">
+            <p id="first">185</p>
+            <p id="second">GB LEFT</p>
+          </div>
         </div>
         <div class="range">
           <label for="data"> You’ve used &nbsp;<p id="freeStorage"> 815 GB </p>&nbsp; of your storage</label>
-          <input class="data" ip="data" type="range" min="0" max="1000" value="80">
-          <div class="volume">
+          <div class="progress progress-moved">
+            <div class="progress-bar">
+              <div class="progress-pointer"></div>
+            </div>
+          </div>
+          <div class="space">
             <p>0 GB</p>
             <p>1000 GB</p>
           </div>
         </div>
       </section>
-      <section class="backGround"></section>
     </div>
   </div>
-  <script src="scripts/index.js"></script>
 </body>
 
 </html>
