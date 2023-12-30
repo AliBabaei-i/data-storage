@@ -10,7 +10,7 @@
 body {
     font-family: "Raleway";
     direction: ltr;
-    background-image: url("/images/bg-desktop.png");
+    background-image: url("../images/bg-desktop.png");
     background-color: hsl(229, 57%, 11%);
     font-size: 14px;
     overflow: hidden;
@@ -263,34 +263,55 @@ body {
     font-weight: 600;
 }
 
-@media screen and (max-width: 1200px) {
-}
 /* Laptops and Desktops */
-@media screen and (max-width: 992px) {
-}
-/* Tablets */
-@media screen and (max-width: 768px) {
-}
-/* Tablets and Large Phones */
-@media screen and (max-width: 600px) {
-}
-/* mobile view port */
-@media screen and (max-width: 376px) {
-    .body {
-        font-size: 13px;
-        overflow: hidden;
-        background-image: url(../images/bg-mobile.png);
-    }
 
+@media screen and (max-width: 992px) {
+    .container .parent {
+        justify-content: space-around;
+        align-self: center;
+        flex-direction: column;
+        width: 768px;
+    }
+    .box {
+        border-radius: 10px;
+    }
+    .notify::after {
+        display: none;
+    }
+    .storage .progress {
+        width: 307px;
+    }
+    .storage label {
+        margin-bottom: 5px;
+    }
+}
+
+/* Tablets */
+
+@media screen and (max-width: 768px) {
+    
+    .notify::after {
+        display: none;
+    }
+    .box {
+        border-radius: 10px 10px 10px 10px;
+    }
+    .storage .progress {
+        width: 307px;
+    }
+    .storage label {
+        margin-bottom: 5px;
+    }
+}
+
+/* Tablets and Large Phones */
+
+@media screen and (max-width: 585px) {
     .container {
-        display: flex;
-        width: 100%;
         flex-direction: row;
         margin: auto;
         justify-content: space-evenly;
         align-items: center;
-        height: 100%ّ;
-        background-image: url(../images/bg-mobile.png);
     }
     .container .parent {
         height: 100%;
@@ -300,158 +321,38 @@ body {
         align-items: center;
         flex-direction: column;
     }
-    .rectangle {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        border-radius: 10px 10px 10px 10px;
-        width: 326px;
-        height: 201px;
-        background-color: #1e2d69;
-        z-index: 1;
-    }
-    .storage {
-        width: 326px;
-        height: 196px;
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-        background-color: #1e2d69;
-        border-radius: 10px;
-        background-color: transparent;
-        position: relative;
-        overflow: visible;
-    }
-    .storage input[type="range"] {
-        height: 20px;
-        width: 262px;
-        margin: 10px 0;
-        background-color: #0c122c;
-        outline: none;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-    .storage [type="range"]::-webkit-slider-runnable-track {
-        background: linear-gradient(
-            to right,
-            rgb(255, 161, 151),
-            rgb(255, 74, 149)
-        );
-        height: 14px;
-        width: 100%;
-        border-radius: 8px;
-    }
-    .storage [type="range"]::-moz-range-track {
-        background: linear-gradient(
-            to right,
-            rgb(255, 161, 151),
-            rgb(255, 74, 149)
-        );
-        height: 14px;
-        width: 100%;
-        border-radius: 8px;
-    }
-
-    .storage [type="range"]::-webkit-slider-thumb {
-        appearance: none;
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        cursor: pointer;
-    }
-    .storage [type="range"]::-moz-range-thumb {
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        cursor: pointer;
-    }
-    .storage label {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        color: #fff;
-        padding-left: 81px;
+    .storage .range {
+        width: 68%;
     }
     .storage .space {
-        width: 262px;
-        height: 44px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        color: #fff;
-    }
-    .storage .notify .triangle {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 22.66px 22.66px 0 0;
-        border-color: #ffff transparent transparent transparent;
-        transform: rotate(90deg);
-        right: 0;
-        bottom: 0;
-        display: none;
-    }
-    .storage .notify .rec {
-        width: 100%;
-        height: 72px;
-        background-color: #fff;
-        border-radius: 10px 10px 10px 10px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
+        width: 301px;
     }
     .storage .notify {
-        width: 179px;
-        height: 94px;
-        position: absolute;
-        top: 168px;
-        right: 82px;
-        z-index: 2;
+        width: 140px;
+        right: 115px;
     }
-    .storage .notify .rec {
-        width: 100%;
-        height: 72px;
-        background-color: #fff;
-        border-radius: 10px 10px 10px 10px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
+    .storage .notify .box .first,
+    .second {
+        font-size: 12px;
+    }
+    .notify::after {
+        display: none;
     }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-    .body {
-        font-size: 13px;
-        overflow: hidden;
-    }
-    .backGround {
-        background-image: url(../images/bg-mobile.png);
+
+/* mobile view port */
+
+@media only screen and (max-width: 515px) {
+    body {
+        background-image: url("../images/bg-mobile.png");
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        position: fixed;
     }
     .container {
-        display: flex;
-        width: 100%;
         flex-direction: row;
         margin: auto;
         justify-content: space-evenly;
         align-items: center;
-        height: 100%ّ;
     }
     .container .parent {
         height: 100%;
@@ -460,131 +361,40 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 71px;
     }
     .rectangle {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        border-radius: 10px 10px 10px 10px;
         width: 326px;
-        height: 201px;
-        background-color: #1e2d69;
-        z-index: 1;
+        margin-bottom: -8px;
     }
     .storage {
+        margin-right: 5px;
+    }
+    .storage .range {
         width: 326px;
-        height: 196px;
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-        justify-content: center;
-        align-items: center;
-        background-color: #1e2d69;
-        border-radius: 10px;
-        background-color: transparent;
-        position: relative;
-        overflow: visible;
     }
-    .storage input[type="range"] {
-        height: 20px;
+    .storage .space {
+        width: 301px;
+    }
+    .storage .progress {
         width: 262px;
-        margin: 10px 0;
-        background-color: #0c122c;
-        outline: none;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-    .storage [type="range"]::-webkit-slider-runnable-track {
-        background: linear-gradient(
-            to right,
-            rgb(255, 161, 151),
-            rgb(255, 74, 149)
-        );
-        height: 14px;
-        width: 100%;
-        border-radius: 8px;
-    }
-    .storage [type="range"]::-moz-range-track {
-        background: linear-gradient(
-            to right,
-            rgb(255, 161, 151),
-            rgb(255, 74, 149)
-        );
-        height: 14px;
-        width: 100%;
-        border-radius: 8px;
-    }
-
-    .storage [type="range"]::-webkit-slider-thumb {
-        appearance: none;
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        cursor: pointer;
-    }
-    .storage [type="range"]::-moz-range-thumb {
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        cursor: pointer;
-    }
-    .storage label {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        color: #fff;
-        padding-left: 81px;
     }
     .storage .space {
         width: 262px;
-        height: 44px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        color: #fff;
     }
-    .storage .notify .triangle {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 22.66px 22.66px 0 0;
-        border-color: #ffff transparent transparent transparent;
-        transform: rotate(90deg);
-        right: 0;
-        bottom: 0;
-        display: none;
-    }
-    .storage .notify .rec {
-        width: 100%;
-        height: 72px;
-        background-color: #fff;
-        border-radius: 10px 10px 10px 10px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
+    .storage label {
+        padding-left: 96px;
     }
     .storage .notify {
         width: 179px;
-        height: 94px;
-        position: absolute;
-        top: 168px;
-        right: 82px;
-        z-index: 2;
+        right: 188px;
+        top: 177px;
     }
-    .storage .notify .rec {
-        width: 100%;
-        height: 72px;
-        background-color: #fff;
-        border-radius: 10px 10px 10px 10px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
+    .storage .notify .box .first,
+    .second {
+        font-size: 12px;
+    }
+    .notify::after {
+        display: none;
     }
 }
