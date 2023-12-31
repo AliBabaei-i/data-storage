@@ -15,6 +15,8 @@
 }
 * {
     overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 body {
     font-family: "Raleway";
