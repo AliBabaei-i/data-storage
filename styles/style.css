@@ -1,12 +1,21 @@
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
 @font-face {
     font-family: Raleway;
-    src: url("Raleway-Bold.ttf") format("ttf");
+    src: url("./fonts/Raleway-Bold.ttf") format("ttf"),
+        url("./fonts/raleway-bold.woff") format("woff");
 }
-
+@font-face {
+    font-family: Raleway-light;
+    src: url("./fonts/Raleway-Medium.ttf");
+}
 * {
     overflow: hidden;
 }
-
 body {
     font-family: "Raleway";
     direction: ltr;
@@ -45,7 +54,7 @@ body {
     border-radius: 10px 100px 10px 10px;
     width: 350px;
     height: 201px;
-    background-color: #1e2d69;
+    background-color: var(--Dark-Blue);
     z-index: 1;
     margin-bottom: 115px;
 }
@@ -84,15 +93,15 @@ body {
     height: 48px;
     width: 48px;
     border-radius: 10px;
-    background-color: #0c122c;
+    background-color: var(--Very-Dark-Blue);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 .rectangle #icon ul li:hover {
     opacity: 0.5;
-    transition: all 0.3s ease;
 }
 .storage {
     width: 540px;
@@ -138,7 +147,7 @@ body {
 }
 #second {
     font-size: 12px;
-    color: rgb(162, 163, 163);
+    color: var(--Grayish-Blue);
     letter-spacing: 1px;
     margin-left: 7px;
 }
@@ -182,7 +191,7 @@ body {
     bottom: 0;
 }
 .storage .range {
-    background-color: #1e2d69;
+    background-color: var(--Dark-Blue);
     width: 100%;
     height: 154px;
     display: flex;
@@ -198,20 +207,19 @@ body {
     width: 100%;
     display: flex;
     flex-direction: row;
-    color: #dbd9ff;
+    color: var(--Pale-Blue);
     padding-left: 81px;
-    font-weight: 100;
-    font-family: "Raleway";
+    font-family: Raleway-light;
 }
 .storage .range label p {
-    font-weight: 700;
+    font-family: Raleway;
 }
 
 .storage .progress {
     height: 20px;
     width: 459px;
     margin: 10px 0;
-    background-color: #0f1b3d;
+    background-color: var(--Very-Dark-Blue);
     border-radius: 20px;
     position: relative;
 }
@@ -230,18 +238,22 @@ body {
 
 .progress-moved .progress-bar {
     width: 74%;
-    background-image: linear-gradient(to right, #ffa197, #ff4a95);
+    background-image: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+    );
     animation: progressAnimation 6s;
 }
 
 @keyframes progressAnimation {
     0% {
         width: 0%;
-        background-color: #ffa197;
+        background-color: hsl(6, 100%, 80%);
     }
     100% {
         width: 74%;
-        background-color: #ff4a95;
+        background-color: hsl(335, 100%, 65%);
     }
 }
 .progress-pointer {
@@ -258,7 +270,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    color: #dbd9ff;
+    color: var(--Pale-Blue);
     font-family: "Raleway";
     font-weight: 600;
 }
@@ -266,47 +278,91 @@ body {
 /* Laptops and Desktops */
 
 @media screen and (max-width: 992px) {
+    .rectangle {
+        width: 468px;
+        margin-right: 23px;
+    }
+
     .container .parent {
         justify-content: space-around;
         align-self: center;
         flex-direction: column;
         width: 768px;
     }
+    .storage .notify {
+        top: 170px;
+        right: 152px;
+    }
     .box {
         border-radius: 10px;
     }
-    .notify::after {
+    .storage .notify::after {
         display: none;
     }
+    .storage {
+        width: 468px;
+    }
     .storage .progress {
-        width: 307px;
+        width: 395px;
     }
     .storage label {
         margin-bottom: 5px;
+    }
+    .storage .space {
+        width: 386px;
+        margin-top: 8px;
     }
 }
 
 /* Tablets */
 
 @media screen and (max-width: 768px) {
-    
+    .rectangle {
+        margin-top: 30px;
+        margin-right: 22px;
+        width: 580px;
+        height: 245px;
+    }
+    .storage {
+        width: 580px;
+    }
+    .storage .notify {
+        width: 191px;
+        right: 215px;
+        top: 172px;
+    }
     .notify::after {
         display: none;
     }
+
     .box {
         border-radius: 10px 10px 10px 10px;
     }
+    .storage .range {
+        width: 100%;
+    }
+
+    .storage .space {
+        width: 464px;
+    }
+
+    .storage .notify .box .first,
+    .second {
+        font-size: 12px;
+    }
+
     .storage .progress {
-        width: 307px;
+        width: 470px;
     }
     .storage label {
         margin-bottom: 5px;
+        width: 93%;
     }
 }
 
 /* Tablets and Large Phones */
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 648px) {
     .container {
         flex-direction: row;
         margin: auto;
@@ -321,15 +377,24 @@ body {
         align-items: center;
         flex-direction: column;
     }
+    .rectangle {
+        margin-top: 30px;
+        margin-right: 22px;
+        width: 447px;
+        height: 245px;
+    }
+    .storage {
+        width: 580px;
+    }
     .storage .range {
-        width: 68%;
+        width: 80%;
     }
     .storage .space {
-        width: 301px;
+        width: 406px;
     }
     .storage .notify {
         width: 140px;
-        right: 115px;
+        right: 226px;
     }
     .storage .notify .box .first,
     .second {
@@ -337,6 +402,12 @@ body {
     }
     .notify::after {
         display: none;
+    }
+    .storage .range .progress {
+        width: 414px;
+    }
+    .storage label {
+        width: 105%;
     }
 }
 
@@ -365,29 +436,32 @@ body {
     }
     .rectangle {
         width: 326px;
+        height: 201px;
         margin-bottom: -8px;
+        margin-left: 14px;
     }
     .storage {
+        width: 362px;
         margin-right: 5px;
     }
-    .storage .range {
-        width: 326px;
+    .storage .range .progress {
+        width: 262px;
     }
     .storage .space {
         width: 301px;
     }
-    .storage .progress {
-        width: 262px;
+    .storage .range {
+        width: 90%;
     }
     .storage .space {
-        width: 262px;
+        width: 260px;
     }
     .storage label {
         padding-left: 96px;
     }
     .storage .notify {
         width: 179px;
-        right: 188px;
+        right: 102px;
         top: 177px;
     }
     .storage .notify .box .first,
